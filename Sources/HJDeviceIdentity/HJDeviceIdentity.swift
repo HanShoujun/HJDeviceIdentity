@@ -13,7 +13,7 @@ public struct HJDeviceIdentity {
 
     private static let keychain = Keychain()
 
-    static var identifier: String {
+    public static var identifier: String {
         /// 获取keychain中的标识
         if let id = getIdentifierInKeychain() {
             return id
