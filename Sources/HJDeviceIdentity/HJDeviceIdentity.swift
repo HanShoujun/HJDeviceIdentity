@@ -9,11 +9,11 @@ struct IdentifierConfig {
     static let InvalidIdfaRegex = #"^0+$"#
 }
 
-struct HJDeviceIdentity {
+public struct HJDeviceIdentity {
 
     private static let keychain = Keychain()
 
-    public static var identifier: String {
+    static var identifier: String {
         /// 获取keychain中的标识
         if let id = getIdentifierInKeychain() {
             return id
